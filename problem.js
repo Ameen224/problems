@@ -44,3 +44,29 @@ function angram(str1,str2){
     }
 }
 angram("one","eno")
+
+
+
+// Given an array of integers and a target number, return all unique pairs [a, b] where:
+// a + b = target
+// Pairs must be unique (no duplicates).
+// Output should be an array of pairs.
+// Example:
+// Input: nums = [2, 7, 11, 15, -2, 9, 1], target = 9  
+// Output: [[2, 7], [-2, 11]]
+function array(arr, num) {
+   let b=arr.filter((num,index)=> arr.indexOf(num)===index).sort((x,y)=>x-y)
+   console.log(b)
+   let a=[]
+   for(let i=0;i<b.length;i++){
+       for(let j=i;j<b.length;j++){
+           if(b[i]+b[j]===num){
+               a.push([b[i],b[j]])
+           }
+       }
+   }
+   console.log(a)
+}
+
+array([2, 7, 11,11, 15, -2,6,4, 9,-5 ,1,-5,5,5,-5], 10);
+
