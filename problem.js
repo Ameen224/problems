@@ -122,3 +122,17 @@ function mergeIntervals(arr) {
 // Test
 const intervals = [[1,3],[2,8],[8,10],[15,18]];
 console.log(mergeIntervals(intervals)); 
+
+
+
+function space(arr){
+    
+    for(let i=0;i<arr.length;i++){
+        if (arr[i]+i==arr.length-1){
+            return i+1
+        }
+    }
+     return arr
+}
+
+console.log("what are:",space([4,3,1,1,4]))
