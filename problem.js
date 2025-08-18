@@ -136,3 +136,16 @@ function space(arr){
 }
 
 console.log("what are:",space([4,3,1,1,4]))
+
+
+// Capitalize the First Letter of Each Word in a Sentence in JavaScript?
+function unique(arr){
+        let b=arr.split("").filter((value,index)=>{
+            return arr.indexOf(value)===index
+        })
+    let a=b.join("")
+    console.log(a)
+}
+
+
+unique("savad")
