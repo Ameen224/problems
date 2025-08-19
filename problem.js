@@ -149,3 +149,30 @@ function unique(arr){
 
 
 unique("savad")
+
+
+function pal(num) {
+    console.log("Input:", num);
+
+    let c = " ";
+
+    for (let i = 0; i < num.length; i++) {
+        let b = [];
+        for (let j = i; j < num.length; j++) {
+            b.push(num[j]);
+            if (b.length > 1) {
+                let str = b.join('');
+                let rev = [...b].reverse().join('');
+                if (str === rev && str.length>c.length) {
+                    c=str
+                }
+            }
+        }
+    }
+
+    console.log("Palindromes:", c);
+}
+
+pal('babad');
+
+
