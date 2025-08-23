@@ -176,3 +176,19 @@ function pal(num) {
 pal('babad');
 
 
+function sub(arr) {
+  let result = [];
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    result.push(arr[i]);
+
+    if (sum === 0) {
+     return result 
+    }
+  }
+
+}
+
+console.log(sub([2, -3, -4, 2, 3]))
