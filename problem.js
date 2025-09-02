@@ -192,3 +192,26 @@ function sub(arr) {
 }
 
 console.log(sub([2, -3, -4, 2, 3]))
+
+
+function num(arr,numb){
+    let num=0
+    let result=[]
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr.length;j++){
+            if(i!==j){
+                let sum=arr[i]+arr[j]
+                if(sum<=numb&&sum>num){
+                    num=sum
+                    result=[i,j]
+                }
+            }
+        }
+    }
+    return [num,result]
+}
+
+
+let movies = [90, 85, 75, 60, 120, 150, 125];
+let T = 250;
+console.log(num(movies, T)); 
